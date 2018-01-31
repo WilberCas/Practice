@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Metadata test</title>
+	</head>
+	<body>
+		<button>Snakes</button>
+		<button>Cry</button>
+		<button>Flamin'</button>
+		<button>Dancer</button>
+
+		<script>
+			//	clickCounts map that will hold the values. As well the all the buttons
+			const clickCounts = new Map();
+			const buttons = document.querySelectorAll('button');
+
+			//	Iterating through the buttons
+			buttons.forEach(button => {
+				//	Setting the property of the map to each button
+				console.log(button);
+				clickCounts.set(button, 0);
+
+				//	Adding an event listener to each button
+				button.addEventListener('click', function(){
+					const val = clickCounts.get(this);
+					clickCounts.set(this, val + 1 );
+					console.log(clickCounts);
+				})
+
+			})
+
+		</script>
+	</body>
+</html>

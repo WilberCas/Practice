@@ -1,0 +1,8 @@
+//This is for initializing browser-sync with a webPage showing all files recognized
+browser-sync start --directory --server --directory --files "*.js,*.html,*.css"
+
+//This command is for initializing browser-sync with the webPage as beginning
+browser-sync start --server --index index.html --files "*.js,*.html,*.css"
+
+
+

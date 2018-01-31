@@ -1,0 +1,25 @@
+{
+  "name": "testing_babel",
+  "version": "1.0.0",
+  "description": "Testing Babel Conversion",
+  "main": "app.js",
+  "scripts": {
+    "babel": "babel app.js --watch --out-file app-compiled.js",
+    "server": "browser-sync start --server --directory --directory --files '*.html, *.css, *.js'"
+  },
+  "author": "Wilber Castaneda",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "babel": {
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"]
+        }
+      }]
+    ]
+  }
+}

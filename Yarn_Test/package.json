@@ -1,0 +1,8 @@
+{
+  "name": "Yarn_Test",
+  "version": "1.0.0",
+  "description": "Creating a Yarn Test",
+  "main": "app.js",
+  "author": "Wilber Castaneda",
+  "license": "MIT"
+}

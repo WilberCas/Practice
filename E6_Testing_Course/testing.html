@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Testing webPage</title>
+    </head>
+    <body>
+        <h1 id="container"></h1>
+    </body>
+    <script>
+        let number = 0;
+        
+        if (number >= 0 ){
+            console.log(number);
+        }
+        
+        const names = ['Wil', 'Dan', 'Kamil'];
+        
+        const fullNames = names.map(function(name){
+            return `${name} boss `;
+            
+        });
+        
+        const fullNames2 = names.map((name)=> {return `${name} boss`;});
+        
+        var person = {firstName: "Wilber", lastName: "Castaneda", age: 19, yearBorn: 1998}
+        console.log(fullNames2);
+        console.log(person.age);
+        
+        
+        
+        function invertNumbers(num1, num2){
+           [num1, num2] = [num2, num1];
+            return true;
+            
+        }
+        
+        
+        var numberOne = 1;
+        var numberTwo = 2;
+        
+        console.log(numberOne);
+        console.log(numberTwo);
+        
+        console.log(invertNumbers(numberOne, numberTwo));
+        
+        console.log(numberOne);
+        console.log(numberTwo);
+    </script>
+</html> 

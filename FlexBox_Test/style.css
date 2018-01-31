@@ -1,0 +1,26 @@
+/* Creating the flexbox container style */
+
+.flexbox-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+
+}
+
+.flexbox-item{
+    align-self: flex-end;
+}
+
+ul{
+    list-style-type:none;
+    background-color:tomato;
+    border-left:none;
+}
+
+li{
+    font-size: 30px;
+    font-family: fantasy;
+    font-weight: bold;
+    border-left:none;
+}

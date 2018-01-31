@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tagged Templates Exercise</title>
+</head>
+<body>
+
+	<div class="bio"></div>
+
+	<script type="text/javascript">
+		const dict = {
+			HTML: 'Hyper Text Markup Language',
+			CSS: 'Cascading Style Sheets',
+			JS: 'JavaScript'
+		};
+		function addAbbreviations(strings, ...values){
+			const abbreviated = values.map(value =>{
+				if(dict[value]){
+					return `<abbr title="${dict[value]}">${value}</abbr>`;
+				}
+				return value;
+			});
+			return strings.reduce((sentence, string , i)=>{
+				return `${sentence}${string}${abbreviated[i] || ''}`;
+
+			}, '');
+		}
+
+		const first = 'Wilber';
+		const last = 'Castaneda';
+		const sentece = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}`;
+
+		//Selecting the div that has "bio" as the class
+		const bio = document.querySelector('.bio');
+		const p = document.createElement('p');
+		p.innerHTML = sentece;
+		bio.appendChild(p);
+
+
+
+
+
+
+	</script>
+</body>
+</html>

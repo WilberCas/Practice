@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Practice JS ES6</title>
+    </head>
+    <body>
+        <script>
+            const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+            cuts.shop = 'MM MEats';
+            // for(let i = 0; i < cuts.length ; ++i){
+            //     console.log(cuts[i]);
+            // }
+
+            // cuts.forEach((cut)=>{
+            //     console.log(cut);
+            //     if(cut === 'Brisket'){
+            //         continue;
+            //     }
+            // })
+
+            // for(const index in cuts){
+            //     console.log(cuts[index]);
+            // }
+            for(const cut of cuts){
+                console.log(cut);
+                if(cut === 'Brisket'){
+                    break;
+                }
+            }
+
+            function sumAll(){
+                console.log(arguments);
+                const nums = Array.from(arguments);
+
+            }
+
+            sumAll(2,34,234,234,234234,234234,2342); 
+
+            const heightsArray = Array.of(1.70,1.80,1.63,1.70);
+            console.log(heightsArray);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testing await and async</title>
+	</head>
+	<body>
+		<script>
+			/*	Function: p_fetch
+				Purpose: It will fetch from an url to be resolved
+			*/
+			// function p_fetch(url){
+			// 	return new Promise((resolve, reject) =>{
+					
+			// 	})
+			// }
+
+
+			/*	Function: request
+				Purpose: It will resolve the promise that comes from fetch
+			*/
+			async function request() {
+				//	Requesting data from wes bos github
+				let req = await fetch('https://api.github.com/users/wesbos');
+				console.log(await req.json());
+			}
+
+			request();
+		</script>
+	</body>
+</html>

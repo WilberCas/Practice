@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Angular Controller Test</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body>
+        <div ng-app="MyApp" ng-controller="MyController" id="container">
+            <h1 ng-click="changeName()">{{name}}</h1>
+            <br>
+            First Name: <input type="text" ng-model="firstName"><br>
+            Last Name: <input type="text" ng-model="lastName"><br>
+            <br>
+            Full Name: {{ firstName + " " + lastName }}
+            <br>
+            <h1>Calculation of 2 + 2: {{result}} </h1>
+        </div>
+        
+        <div ng-app="MyApp" ng-controller="SecondControll " id="SecondContainer">
+            <h1>{{firstName_+ " "+lastName_}}</h1>
+        </div>
+    </body>
+</html>

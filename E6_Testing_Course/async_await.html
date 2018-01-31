@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Async Await: Native Promises</title>
+	</head>
+
+	<video controls class="handsome"></video>
+	<body>
+		<script>
+			// fetch('https://api.github.com/users/wesbos')
+			// .then(data => data.json())
+			// .then(data => console.log(data))
+			// .catch(err =>{
+			// 	console.error('OH NOOOOO!');
+			// 	console.error(err);
+			// })
+			
+			//	Created a video variable by selecting the class handsome
+			const video = document.querySelector('.handsome');
+
+
+			//	navigator.mediaDevices.getUserMedia is getting the data from the user.
+			//	Calling .then() function to extract the input from the webcam into the page.
+			navigator.mediaDevices.getUserMedia({ video: true}).then(mediaStream =>{
+			video.srcObject = mediaStream;
+			video.load();
+			video.play();
+			}).catch(err => {
+				console.log(err);
+			})
+		</script>
+	</body>
+</html>

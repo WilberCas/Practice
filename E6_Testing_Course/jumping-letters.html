@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The ...Spread Operator</title>
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: sans-serif;
+      background: #ffc600;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      color:white;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    }
+    .jump span {
+      display: inline-block;
+      transition: transform 0.2s;
+      cursor:url('http://csscursor.info/source/santahand.png'), default;
+    }
+    .jump span:hover {
+      transform: translateY(-20px) rotate(10deg) scale(2);
+    }
+  </style>
+</head>
+<body>
+  <h2 class="jump">SPREADS!</h2>
+
+<script>
+  //Selecting the h2 .jump class. As well as creating a const that will store the string
+  const jump = document.querySelector('.jump');
+  let str = jump.textContent;
+
+  //Parsing through the string. Additionally applying the <span> tag
+  str = [...str];
+  str = str.map(st => `<span>${st}</span>`);
+
+  jump.innerHTML =str;
+  
+
+  //Teacher version
+  const heading = document.querySelector('.jump');
+  heading.innerHTML = sparandWrap(heading.textContent);
+
+  function sparandWrap(word){
+    return [...word].map(letter => `<span>${letter}</letter>`).join(''); //.join() it merges all element on the array into a string. .join('') the content inside the parenthesis will
+    //separate each element of the array next to it.
+
+  }
+
+
+
+
+  //
+
+  
+</script>
+</body>
+</html>
