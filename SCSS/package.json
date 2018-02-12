@@ -1,0 +1,14 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "Testing SCSS capabilities",
+  "main": "app.js",
+  "scripts": {
+    "start": "node-sass -o css otherSCSS"
+  },
+  "author": "Wilber Castaneda",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

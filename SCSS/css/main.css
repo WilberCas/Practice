@@ -1,0 +1,14 @@
+.wolverine {
+  text-align: center;
+  background-image: linear-gradient(#db6e57, #a83b24, #150705); }
+  .wolverine:hover {
+    background-image: linear-gradient(#57c4db, #2491a8, complemenent(#150705)); }
+  .wolverine:hover .wolverine-text {
+    color: tranparentize(#e9ca86, 0.2); }
+  .wolverine-text {
+    font-size: 1.5 rem;
+    padding-bottom: 0.5 rem;
+    color: #be6b45; }
+  .wolverine img {
+    margin-top: 1rem;
+    border-radius: 25%; }

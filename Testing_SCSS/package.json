@@ -1,0 +1,14 @@
+{
+  "name": "tesing_linking_scss",
+  "version": "1.0.0",
+  "description": "Testing linking scss",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -o css scss"
+  },
+  "author": "Wilber Castaneda",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
