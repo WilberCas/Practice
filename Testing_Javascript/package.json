@@ -1,0 +1,14 @@
+{
+  "name": "testing_javascript",
+  "version": "1.0.0",
+  "description": "Testing js es6 as well as SASS",
+  "main": "api.js",
+  "scripts": {
+    "start": "node-sass -o css scss"
+  },
+  "author": "Wilber Castaneda",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

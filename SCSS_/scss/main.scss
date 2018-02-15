@@ -1,0 +1,47 @@
+// Testing features that will be present on the webpage
+body {
+  margin: 0px;
+}
+.nav {
+  width: 100%;
+  background-color: #E59866;
+
+  &-bar {
+    margin: 0px;
+    list-style-type: none;
+    text-align:  center;
+    li{
+      display: inline-block;
+      margin: 15px;
+      font: bold 23px comic-sans;
+      transition: color 0.5s;
+
+      &:hover {
+        color: #AED6F1;
+      }
+    }
+  }
+}
+
+.wrapper {
+
+  width:100%;
+  text-align: justify;
+  .column {
+    float:left;
+    width: 46%;
+    margin: 15px 30px;
+  }
+
+  #title {
+    text-align: center;
+    color: #2C3E50;
+    font: bold 30px sans-serif;
+    transition: color 0.5s;
+    &:hover {
+      color: #AED6F1;
+    }
+
+  }
+
+}

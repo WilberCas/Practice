@@ -1,0 +1,23 @@
+%icon {
+  transition: background-color ease .2s;
+  margin: 0 .5em;
+}
+
+.error-icon {
+  @extend %icon;
+  /* Error specific styles ... */
+}
+
+.info-icon {
+  @extend %icon;
+  /* Info specific styles ... */
+}
+
+%computer {
+  background-color: grey;
+  margin: 0 .5em;
+}
+
+.minicomputer {
+  @extend %computer;
+}

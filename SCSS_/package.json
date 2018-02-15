@@ -1,0 +1,16 @@
+{
+  "name": "scss_",
+  "version": "1.0.0",
+  "description": "Testing all learned of sass",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass --watch scss -o css ",
+    "serverInit": "browser-sync start --directory --server  --files '*.js, *.html, *.css'"
+  },
+  "author": "Wilber Castaneda",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "node-sass": "^4.7.2"
+  }
+}

@@ -1,25 +1,47 @@
-$base-color: #a83b24;
-$light-color: lighten($base-color, 20%);
-$dark-color: darken($base-color, 35%);
-$cbc : complement($base-color);
-$clc : complement($light-color);
-$cdc: complemenent($dark-color);
 
-.wolverine{
+.character {
   text-align: center;
-  background-image: linear-gradient($light-color, $base-color, $dark-color);
-
-  &:hover { background-image: linear-gradient($clc, $cbc, $cdc);}
-  &:hover &-text {color: tranparentize(mix($base-color, #fffaa6, 25%), .2);}
-
-  &-text{
+  p{
     font-size: 1.5 rem;
     padding-bottom: 0.5 rem;
-    color: mix($base-color, #fffaa6, 75%);
   }
-
   img{
     margin-top: 1rem;
     border-radius: 25%;
+  }
+
+}
+
+@mixin media($min-width) {
+  @media screen and (min-width: $min-width) { @content; }
+}
+@mixin make-transitions($transitions...) {
+  transition: $transitions;
+}
+@mixin make-character($base-color, $mix-color, $border: null){
+  $light-color: lighten($base-color, 20%);
+  $dark-color: darken($base-color, 35%);
+  $cbc : complement($base-color);
+  $clc : complement($light-color);
+  $cdc: complemenent($dark-color);
+  border:$border;
+  background-image: linear-gradient($light-color, $base-color, $dark-color);
+  &:hover { background-image: linear-gradient($clc, $cbc, $cdc);}
+  &:hover &-text {color: tranparentize(mix($base-color, $mix-color, 25%), .2);}
+  &-text{ color: mix($base-color, $mix-color, 75%);}
+  img{
+    @content;
+  }
+}
+
+.wolverine { @include make-character(#a83b24,#fffaa6, 5px solid brown){
+  @include media(800px) {content: url("../images/pirated.png")};
+  @include make-transitions(margin 1s, border-radius 1s, border 1s, transform 1s);
+    &:hover {
+      margin-top: 5 rem;
+      border-radius: 50%;
+      border: 10px solid green;
+      transform: rotate3d(10,0,0, 360deg);
+    }
   }
 }

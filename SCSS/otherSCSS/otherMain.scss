@@ -1,0 +1,16 @@
+%hero { background: linear-gradient(red,white,blue)}
+%villian {background: darkred;}
+@mixin character($type) {
+  height: 20px;
+  width: 20px;
+
+  @extend %#{$type};
+}
+
+.doc-ock { @include character(villian);}
+.cheetah { @include character(villian);}
+.enchantress { @include character(villian);}
+
+.captain-america { @include character(hero);}
+.medusa { @include character(hero);}
+.she-hulk { @include character(hero);}
